@@ -5,7 +5,7 @@ body {
     line-height: 1.15em;
     background-attachment: fixed;
     background-color: #697677;
-    background-image: url(/static/background.jpg);
+    background-image: url(background.jpg);
     color: black;
 }
 
