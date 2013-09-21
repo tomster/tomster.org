@@ -43,6 +43,15 @@
   "foundation/scss/foundation/components/dropdown",
   "foundation/scss/normalize";
 
+.vcard h1.fn { 
+    font-family: Georgia;
+    font-style: italic;
+    text-transform: lowercase;
+    font-size: 300%;
+    margin: 1.67em auto 1em;
+    text-align: center;
+}
+
 body {
-    background-color: green;
+    text-align: center;
 }
