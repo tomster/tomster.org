@@ -1,0 +1,8 @@
+---
+
+- hosts: webserver
+  gather_facts: false
+
+  tasks:
+    - name: copy pre-built site to webserver
+      local_action: command  rsync -av --delete dist/ {{ inventory_hostname }}:/home/tomster/hosting/tomster.org-static/

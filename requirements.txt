@@ -1,0 +1,8 @@
+Jinja2==2.7.1
+MarkupSafe==0.18
+PyYAML==3.10
+ansible==1.2.3
+boto==2.12.0
+lazy==1.1
+paramiko==1.10.2
+pycrypto==2.6
