@@ -22,7 +22,7 @@ bin/ansible bin/ansible-playbook: bin/pip
 bin/python bin/pip:
 	virtualenv .
 
-deploy: bin/ansible-playbook
+deploy: bin/ansible-playbook dist/index.html
 	bin/ansible-playbook deploy.yml -i hosts
 
 clean:
