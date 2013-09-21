@@ -40,8 +40,8 @@
   // "foundation/scss/foundation/components/tables",
   "foundation/scss/foundation/components/thumbs",
   "foundation/scss/foundation/components/tooltips",
-  "foundation/scss/foundation/components/dropdown",
-  "foundation/scss/normalize";
+  "foundation/scss/foundation/components/dropdown";
+  // "foundation/scss/normalize";
 
 .vcard h1.fn { 
     font-family: Georgia;
@@ -52,6 +52,14 @@
     text-align: center;
 }
 
+.vcard {
+  background-color: white;
+}
+
 body {
     text-align: center;
+    background-attachment: fixed;
+    background-color: #697677;
+    background-image: url(../images/background.jpg);
+    height: 100%;
 }
