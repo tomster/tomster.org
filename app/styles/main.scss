@@ -48,8 +48,12 @@
     font-style: italic;
     text-transform: lowercase;
     font-size: 300%;
-    margin: 1.67em auto 1em;
+    margin: 1.67em auto 0em;
     text-align: center;
+}
+
+img.avatar {
+  margin-bottom: 2em;
 }
 
 .vcard {
