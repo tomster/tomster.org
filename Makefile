@@ -16,7 +16,7 @@ $(foundation): .bowerrc bower.json $(grunt)
 $(grunt): package.json
 	npm install
 
-bin/ansible bin/ansible-playbook: bin/pip
+bin/ansible bin/ansible-playbook bin/mynt: bin/pip
 	bin/pip install -r requirements.txt
 
 bin/python bin/pip:
