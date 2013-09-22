@@ -282,7 +282,7 @@ module.exports = function (grunt) {
                     src: [
                         '*.{ico,png,txt}',
                         '.htaccess',
-                        'images/{,*/}*.{webp,gif}',
+                        'images/{,*/}*.{webp,gif,png,jpg,jpeg}',
                         'styles/fonts/{,*/}*.*'
                     ]
                 }]
@@ -298,7 +298,6 @@ module.exports = function (grunt) {
         concurrent: {
             server: [
                 'compass',
-                'coffee:dist',
                 'copy:styles'
             ],
             test: [
@@ -306,11 +305,8 @@ module.exports = function (grunt) {
                 'copy:styles'
             ],
             dist: [
-                'coffee',
                 'compass',
                 'copy:styles',
-                'imagemin',
-                'svgmin',
                 'htmlmin'
             ]
         }
