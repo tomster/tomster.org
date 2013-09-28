@@ -5,6 +5,20 @@ $base-font-size: 105% !default;
 
 // This includes all of the foundation global elements that are needed to work with any of the other files.
 @import "foundation/scss/foundation/variables";
+$topbar-bg-color: white;
+$topbar-link-color: #111;
+$topbar-link-color-hover: #111;
+$topbar-link-color-active: #111;
+$topbar-menu-link-color: #111;
+$topbar-menu-icon-color: #111;
+
+$topbar-dropdown-bg: $topbar-bg-color;
+$topbar-dropdown-link-color: #111;
+// $topbar-dropdown-link-bg: lighten($topbar-bg-color, 5%);
+$topbar-dropdown-toggle-size: 5px;
+$topbar-dropdown-toggle-color: #fff;
+$topbar-dropdown-toggle-alpha: 0.5;
+$topbar-link-font-size: em-calc(15);
 
 // Foundation Components
 @import
