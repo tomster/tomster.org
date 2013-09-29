@@ -9,4 +9,5 @@
 /share
 /*.sublime-workspace
 /src
-
+/build
+/site/_templates/layout.html

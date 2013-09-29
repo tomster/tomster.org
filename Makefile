@@ -3,9 +3,20 @@
 grunt = node_modules/grunt/package.json
 foundation = app/bower_components/foundation/.bower.json
 
-all: bin/ansible dist/index.html
+all: bin/ansible build
 
-build: dist/index.html
+build: dist/index.html mynt
+
+mynt: build/index.html
+	rm -rf build/assets/scripts
+	cp -R dist/assets/scripts build/assets/
+	rm -rf build/assets/styles
+	cp -R dist/assets/styles build/assets/
+	cp -R dist/assets/images/* build/assets/images/
+
+build/index.html: $(shell git ls-files site/ )
+	cp dist/index.html site/_templates/layout.html
+	bin/mynt gen site build -f
 
 dist/index.html: Gruntfile.js $(grunt) $(foundation) $(shell git ls-files app/ )
 	grunt build
