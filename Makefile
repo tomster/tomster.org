@@ -14,7 +14,7 @@ mynt: build/index.html
 	cp -R dist/assets/styles build/assets/
 	cp -R dist/assets/images/* build/assets/images/
 
-build/index.html: $(shell git ls-files site/ )
+build/index.html: $(shell git ls-files site/ ) app
 	cp dist/index.html site/_templates/layout.html
 	bin/mynt gen site build -f
 
