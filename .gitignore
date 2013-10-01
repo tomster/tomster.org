@@ -2,7 +2,7 @@
 /dist
 /.tmp
 /.sass-cache
-/app/bower_components
+/site/_assets/bower_components
 /bin
 /include
 /lib
@@ -10,4 +10,3 @@
 /*.sublime-workspace
 /src
 /build
-/site/_templates/layout.html

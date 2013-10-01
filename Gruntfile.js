@@ -15,19 +15,20 @@ module.exports = function (grunt) {
 
     // configurable paths
     var yeomanConfig = {
-        app: 'app',
-        dist: 'dist'
+        app: 'site',
+        dist: 'dist',
+        site: 'build'
     };
 
     grunt.initConfig({
         yeoman: yeomanConfig,
         watch: {
             compass: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+                files: ['<%= yeoman.app %>/_assets/styles/{,*/}*.{scss,sass}'],
                 tasks: ['compass:server']
             },
             styles: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
+                files: ['<%= yeoman.site %>/_assets/styles/{,*/}*.css'],
                 tasks: ['copy:styles']
             },
             livereload: {
@@ -35,10 +36,10 @@ module.exports = function (grunt) {
                     livereload: '<%= connect.options.livereload %>'
                 },
                 files: [
-                    '<%= yeoman.app %>/*.html',
-                    '.tmp/styles/{,*/}*.css',
-                    '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
-                    '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+                    '<%= yeoman.site %>/*.html',
+                    '.tmp/assets/styles/{,*/}*.css',
+                    '{.tmp,<%= yeoman.site %>}/assets/scripts/{,*/}*.js',
+                    '<%= yeoman.site %>/assets/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                 ]
             }
         },
@@ -54,7 +55,7 @@ module.exports = function (grunt) {
                     open: true,
                     base: [
                         '.tmp',
-                        yeomanConfig.app
+                        yeomanConfig.site
                     ]
                 }
             },
@@ -84,19 +85,19 @@ module.exports = function (grunt) {
             },
             all: [
                 'Gruntfile.js',
-                '<%= yeoman.app %>/scripts/{,*/}*.js',
-                '!<%= yeoman.app %>/scripts/vendor/*'
+                '<%= yeoman.app %>/_assets/scripts/{,*/}*.js',
+                '!<%= yeoman.app %>/_assets/scripts/vendor/*'
             ]
         },
         compass: {
             options: {
-                sassDir: '<%= yeoman.app %>/styles',
-                cssDir: '.tmp/styles',
-                generatedImagesDir: '.tmp/images/generated',
-                imagesDir: '<%= yeoman.app %>/images',
-                javascriptsDir: '<%= yeoman.app %>/scripts',
-                fontsDir: '<%= yeoman.app %>/styles/fonts',
-                importPath: '<%= yeoman.app %>/bower_components',
+                sassDir: '<%= yeoman.app %>/_assets/styles',
+                cssDir: '.tmp/assets/styles',
+                generatedImagesDir: '.tmp/assets/images/generated',
+                imagesDir: '<%= yeoman.app %>/_assets/images',
+                javascriptsDir: '<%= yeoman.app %>/_assets/scripts',
+                fontsDir: '<%= yeoman.app %>/_assets/styles/fonts',
+                importPath: '<%= yeoman.app %>/_assets/bower_components',
                 httpImagesPath: '/images',
                 httpGeneratedImagesPath: '/assets/images/generated',
                 httpFontsPath: '/assets/styles/fonts',
@@ -120,7 +121,7 @@ module.exports = function (grunt) {
         },*/
         'bower-install': {
             app: {
-                html: '<%= yeoman.app %>/index.html',
+                html: '<%= yeoman.app %>/_templates/layout.html',
                 ignorePath: '<%= yeoman.app %>/'
             }
         },
@@ -146,7 +147,7 @@ module.exports = function (grunt) {
             options: {
                 dest: '<%= yeoman.dist %>'
             },
-            html: '<%= yeoman.app %>/index.html'
+            html: '<%= yeoman.app %>/_templates/layout.html'
         },
         usemin: {
             options: {
@@ -195,8 +196,8 @@ module.exports = function (grunt) {
             styles: {
                 expand: true,
                 dot: true,
-                cwd: '<%= yeoman.app %>/assets/styles',
-                dest: '.tmp/styles/',
+                cwd: '<%= yeoman.app %>/_assets/styles',
+                dest: '.tmp/assets/styles/',
                 src: '{,*/}*.css'
             }
         },

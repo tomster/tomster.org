@@ -8,14 +8,8 @@ all: bin/ansible build
 build: dist/index.html mynt
 
 mynt: build/index.html
-	rm -rf build/assets/scripts
-	cp -R dist/assets/scripts build/assets/
-	rm -rf build/assets/styles
-	cp -R dist/assets/styles build/assets/
-	cp -R dist/assets/images/* build/assets/images/
 
-build/index.html: $(shell git ls-files site/ ) app
-	cp dist/index.html site/_templates/layout.html
+build/index.html: $(shell git ls-files site/ )
 	bin/mynt gen site build -f
 
 app: dist/index.html
