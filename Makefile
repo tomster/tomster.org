@@ -18,6 +18,8 @@ build/index.html: $(shell git ls-files site/ )
 	cp dist/index.html site/_templates/layout.html
 	bin/mynt gen site build -f
 
+app: dist/index.html
+
 dist/index.html: Gruntfile.js $(shell git ls-files app/ )
 	grunt build
 
@@ -41,4 +43,4 @@ deploy: bin/ansible-playbook dist/index.html
 clean:
 	git clean -fXd
 
-.PHONY: clean deploy install
+.PHONY: clean deploy install app
