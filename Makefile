@@ -18,8 +18,10 @@ build/index.html: $(shell git ls-files site/ )
 	cp dist/index.html site/_templates/layout.html
 	bin/mynt gen site build -f
 
-dist/index.html: Gruntfile.js $(grunt) $(foundation) $(shell git ls-files app/ )
+dist/index.html: Gruntfile.js $(shell git ls-files app/ )
 	grunt build
+
+install: $(grunt) $(foundation)
 
 $(foundation): .bowerrc bower.json $(grunt)
 	bower install
@@ -39,4 +41,4 @@ deploy: bin/ansible-playbook dist/index.html
 clean:
 	git clean -fXd
 
-.PHONY: clean deploy
+.PHONY: clean deploy install
