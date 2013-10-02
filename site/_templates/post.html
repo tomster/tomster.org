@@ -4,17 +4,15 @@
 {% set title = item.title %}
 
 {% block breadcrumbs %}
-    <ul class="breadcrumbs">
-        <li><a href="{{ get_url('/blog') }}">Blog</a><span>&rsaquo;</span></li>
+        <li><a href="{{ get_url('/blog/') }}">Blog</a><span>&rsaquo;</span></li>
         <li>{{ item.title|truncate(75) }}</li>
-    </ul>
 {% endblock %}
 
 {% block content %}
     <div class="item">
         <div class="item-header">
             <h1>{{ item.title }}</h1>
-            <h2>{{ item.date }}{% if item.tags %} <span>&raquo;</span> {% for tag in item.tags %}<a href="{{ get_url(posts.tags[tag].url) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}</h2>
+            <p class="byline">{{ item.date }}{% if item.tags %} Filed under: <span>&raquo;</span> {% for tag in item.tags %}<a href="{{ get_url(posts.tags[tag].url) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}</p>
         </div>
         
         <div class="item-body">

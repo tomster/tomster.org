@@ -4,8 +4,8 @@
 {% set title = 'Blog &rsaquo; Archives  &rsaquo; ' ~ archive.year %}
 
 {% block breadcrumbs %}
-    <ul id="breadcrumbs">
-        <li><a href="{{ get_url() }}" data-pjax="#content">Blog</a><span>&rsaquo;</span></li>
+    <ul class="breadcrumbs">
+        <li><a href="{{ get_url('/blog/') }}" data-pjax="#content">Blog</a><span>&rsaquo;</span></li>
         <li><a href="{{ get_url('archives/') }}">Archives</a><span>&rsaquo;</span></li>
         <li>{{ archive.year }}</li>
     </ul>

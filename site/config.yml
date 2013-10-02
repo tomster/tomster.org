@@ -28,7 +28,7 @@ description: My personal website
 # Used in the site feed.
 email: tom@tomster.org
 # Your site's subtitle.
-subtitle: subtitle
+subtitle: 
 # Your site's title. (required to generate a valid feed)
 title: tomster.org
 
@@ -38,9 +38,9 @@ title: tomster.org
 #
 
 archive_layout: archive.html
-archives_url: /archives/
+archives_url: /blog/archives/
 tag_layout: tag.html
-tags_url: /archives/
+tags_url: /blog/archives/
 
 
 #

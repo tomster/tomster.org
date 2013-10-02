@@ -97,3 +97,22 @@ footer p {
   font-size: 80%;
   color: #818f81
 }
+
+.byline {
+  font-size: .8em;
+  color: #777;
+}
+
+.top-bar .name {
+  font-family: Georgia;
+  font-style: italic;
+  text-transform: lowercase;
+  font-size: 1em;
+  font-weight: bold;
+  padding-left: 1em;
+  padding-top: .5em;
+}
+
+.top-bar .name a {
+  color: $topbar-link-color;
+}
