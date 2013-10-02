@@ -61,6 +61,7 @@ $topbar-link-font-size: em-calc(15);
 
 .vcard {
   border: none;
+  text-align: center;
 }
 
 .vcard h1.fn { 
@@ -82,11 +83,14 @@ img.avatar {
 }
 
 body {
-    text-align: center;
     background-attachment: fixed;
     background-color: #697677;
     background-image: url(../images/background.jpg);
     height: 100%;
+}
+
+footer {
+  text-align: center;
 }
 
 footer p {
