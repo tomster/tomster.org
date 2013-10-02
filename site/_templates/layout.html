@@ -18,6 +18,13 @@
 
 <body>
     {% include 'topbar.html' %}
+
+    <div class="row">
+        <div class="large-12 columns">
+            {% block breadcrumbs %}{% endblock %}
+        </div>
+    </div>
+
     <div class="row">
         <div class="large-12 columns">
             {% block content %}{% endblock %}

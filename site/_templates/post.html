@@ -4,7 +4,7 @@
 {% set title = item.title %}
 
 {% block breadcrumbs %}
-    <ul id="breadcrumbs">
+    <ul class="breadcrumbs">
         <li><a href="{{ get_url() }}">Blog</a><span>&rsaquo;</span></li>
         <li>{{ item.title|truncate(75) }}</li>
     </ul>
