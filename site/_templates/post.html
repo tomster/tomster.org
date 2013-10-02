@@ -9,14 +9,12 @@
 {% endblock %}
 
 {% block content %}
-    <div class="item">
-        <div class="item-header">
-            <h1>{{ item.title }}</h1>
-            <p class="byline">{{ item.date }}{% if item.tags %} Filed under: <span>&raquo;</span> {% for tag in item.tags %}<a href="{{ get_url(posts.tags[tag].url) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}</p>
-        </div>
-        
-        <div class="item-body">
-            {{ item.content }}
-        </div>
+    <div class="item-header">
+        <h1>{{ item.title }}</h1>
+        <p class="byline">{{ item.date }}{% if item.tags %} Filed under: <span>&raquo;</span> {% for tag in item.tags %}<a href="{{ get_url(posts.tags[tag].url) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}</p>
+    </div>
+    
+    <div class="item-body">
+        {{ item.content }}
     </div>
 {% endblock %}

@@ -1,11 +1,28 @@
 // Make sure the charset is set appropriately
 @charset "UTF-8";
 
-$base-font-size: 105% !default;
+$base-font-size: 100% !default;
 
 // This includes all of the foundation global elements that are needed to work with any of the other files.
 @import "foundation/scss/foundation/variables";
-$topbar-bg-color: white;
+
+
+$h1-font-size: em-calc(37);
+$h2-font-size: em-calc(27);
+$h3-font-size: em-calc(23);
+$h4-font-size: em-calc(18);
+$h5-font-size: em-calc(16);
+
+// Control how subheaders are styled.
+
+// $subheader-line-height: 1.4;
+// $subheader-font-color: lighten($header-font-color, 30%);
+// $subheader-font-weight: 300;
+// $subheader-top-margin: .2em;
+// $subheader-bottom-margin: .5em;
+
+
+$topbar-bg-color: #eee;
 $topbar-link-color: #111;
 $topbar-link-color-hover: #111;
 $topbar-link-color-active: #111;
@@ -62,6 +79,7 @@ $topbar-link-font-size: em-calc(15);
 .vcard {
   border: none;
   text-align: center;
+  width: 100%;
 }
 
 .vcard h1.fn { 
@@ -83,14 +101,28 @@ img.avatar {
 }
 
 body {
-    background-attachment: fixed;
     background-color: #697677;
-    background-image: url(../images/background.jpg);
     height: 100%;
 }
 
-footer {
+@media #{$medium} { 
+
+  body {
+      background-attachment: fixed;
+      background-image: url(../images/background.jpg);
+  }
+
+}
+
+h1 a,
+h2 a {
+  color: $header-font-color;
+}
+
+footer.row {
   text-align: center;
+  background-color: $topbar-bg-color;
+  padding-top: 1em;
 }
 
 footer p {
@@ -101,6 +133,10 @@ footer p {
 .byline {
   font-size: .8em;
   color: #777;
+}
+
+.top-bar {
+  margin-bottom: 1em;
 }
 
 .top-bar .name {
@@ -114,5 +150,11 @@ footer p {
 }
 
 .top-bar .name a {
-  color: $topbar-link-color;
+  color: $header-font-color
+}
+
+
+.code {
+  width: 100%;
+  overflow: hidden;
 }
