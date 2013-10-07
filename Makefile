@@ -5,17 +5,26 @@ foundation = app/bower_components/foundation/.bower.json
 
 all: bin/ansible build
 
-build: dist/index.html mynt
+# build the site for deployment
+build: preview build/deploy/index.html
 
-mynt: build/index.html
+# build the site for local preview
+preview: build/preview/index.html
 
-build/index.html: $(shell git ls-files site/ )
-	bin/mynt gen site build -f
+build/preview/index.html: $(shell git ls-files site/ ) site/_posts/*.rst
+	bin/mynt gen site build/preview -f
 
-app: dist/index.html
-
-dist/index.html: Gruntfile.js $(shell git ls-files app/ )
+build/deploy/index.html: Gruntfile.js $(shell git ls-files app/ )
 	grunt build
+	mv site/_templates/layout.html site/_templates/layout.html.bak
+	mv build/deploy/_templates/layout.html site/_templates/layout.html
+	mv build/deploy/assets /tmp/
+	bin/mynt gen site build/deploy -f
+	rm -rf build/deploy/_templates
+	rm -rf build/deploy/assets/styles
+	mv /tmp/assets/* build/deploy/assets/
+	rm -rf /tmp/assets
+	mv site/_templates/layout.html.bak site/_templates/layout.html
 
 install: $(grunt) $(foundation)
 

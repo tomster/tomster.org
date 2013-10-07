@@ -16,8 +16,8 @@ module.exports = function (grunt) {
     // configurable paths
     var yeomanConfig = {
         app: 'site',
-        dist: 'dist',
-        site: 'build'
+        dist: 'build/deploy',
+        site: 'build/preview'
     };
 
     grunt.initConfig({
@@ -36,7 +36,7 @@ module.exports = function (grunt) {
                     livereload: '<%= connect.options.livereload %>'
                 },
                 files: [
-                    '<%= yeoman.site %>/*.html',
+                    '<%= yeoman.site %>/**/*.html',
                     '.tmp/assets/styles/{,*/}*.css',
                     '{.tmp,<%= yeoman.site %>}/assets/scripts/{,*/}*.js',
                     '<%= yeoman.site %>/assets/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
@@ -62,6 +62,7 @@ module.exports = function (grunt) {
             dist: {
                 options: {
                     open: true,
+                    port: 9001,
                     base: yeomanConfig.dist
                 }
             }
@@ -147,7 +148,7 @@ module.exports = function (grunt) {
             options: {
                 dest: '<%= yeoman.dist %>'
             },
-            html: '<%= yeoman.app %>/_templates/layout.html'
+            html: '<%= yeoman.site %>/index.html'
         },
         usemin: {
             options: {
@@ -172,7 +173,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: '<%= yeoman.app %>',
-                    src: '*.html',
+                    src: '_templates/layout.html',
                     dest: '<%= yeoman.dist %>'
                 }]
             }
@@ -216,7 +217,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('server', function (target) {
         if (target === 'dist') {
-            return grunt.task.run(['build', 'connect:dist:keepalive']);
+            return grunt.task.run(['connect:dist:keepalive']);
         }
 
         grunt.task.run([
