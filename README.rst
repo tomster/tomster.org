@@ -5,7 +5,8 @@ It's only here on github for my own convenience and perhaps for the benefit of p
 It currently uses:
 
 * a `yeoman <http://yeoman.io>`_ based site structure (built with `generator-webapp <https://github.com/yeoman/generator-webapp>`_)
-* a (S)CSS layout based on `ZURB Foundaiton <http://foundation.zurb.com>`_.
+* a (S)CSS layout based on `ZURB Foundation <http://foundation.zurb.com>`_.
+* a blog built with `mynt <http://mynt.mirroredwhite.com>`_.
 * a deploy process using `ansible <http://www.ansibleworks.com/docs/>`_.
 
 If any of the above tickles you, take a peek and feel free to ask questions or – even better – point out stuff I could do better :)
