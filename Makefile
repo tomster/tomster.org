@@ -46,4 +46,4 @@ deploy: bin/ansible-playbook dist/index.html
 clean:
 	git clean -fXd
 
-.PHONY: clean deploy install app
+.PHONY: clean deploy install preview
