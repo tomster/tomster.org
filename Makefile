@@ -1,7 +1,7 @@
 # convenience makefile to set up the frontend
 
 grunt = node_modules/grunt/package.json
-foundation = app/bower_components/foundation/.bower.json
+foundation = site/_assets/bower_components/foundation/.bower.json
 
 all: bin/ansible build
 
@@ -14,7 +14,7 @@ preview: build/preview/index.html
 build/preview/index.html: $(shell git ls-files site/ ) site/_posts/*.rst
 	bin/mynt gen site build/preview -f
 
-build/deploy/index.html: Gruntfile.js $(shell git ls-files app/ )
+build/deploy/index.html: Gruntfile.js $(shell git ls-files site/ )
 	grunt build
 	mv site/_templates/layout.html site/_templates/layout.html.bak
 	mv build/deploy/_templates/layout.html site/_templates/layout.html
