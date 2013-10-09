@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed
+  xmlns="http://www.w3.org/2005/Atom"
+  xmlns:thr="http://purl.org/syndication/thread/1.0"
+  xml:lang="en"
+   >
+  <title type="text">tomster.org</title>
+  <subtitle type="text">Just a simple HTML5 blog</subtitle>
+
+  <updated>2013-10-09T10:42:16Z</updated>
+  <generator uri="http://blogofile.com/">Blogofile</generator>
+
+  <link rel="alternate" type="text/html" href="http://tomster.org/blog" />
+  <id>http://tomster.org/blog/feed/atom/</id>
+  <link rel="self" type="application/atom+xml" href="http://tomster.org/blog/feed/atom/" />
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://tomster.org/blog</uri>
+    </author>
+    <title type="html"><![CDATA[Hooking up grunt with mynt]]></title>
+    <link rel="alternate" type="text/html" href="http://tomster.org/blog/2013/10/09/hooking-up-grunt-with-mynt" />
+    <id>http://tomster.org/blog/2013/10/09/hooking-up-grunt-with-mynt</id>
+    <updated>2013-10-09T12:42:16Z</updated>
+    <published>2013-10-09T12:42:16Z</published>
+    <category scheme="http://tomster.org/blog" term="bower" />
+    <category scheme="http://tomster.org/blog" term="grunt" />
+    <category scheme="http://tomster.org/blog" term="meta" />
+    <category scheme="http://tomster.org/blog" term="mynt" />
+    <category scheme="http://tomster.org/blog" term="yeoman" />
+    <summary type="html"><![CDATA[Hooking up grunt with mynt]]></summary>
+    <content type="html" xml:base="http://tomster.org/blog/2013/10/09/hooking-up-grunt-with-mynt"><![CDATA[<div class="document">
+<p>During the two most recent work projects I got to appreciate the convenience that a <a class="reference external" href="http://yeoman.io">yeoman</a> based workflow can bring. So when I set out to rejuvinate this blog, I naturally tried to incorporate its goodness with the static generator I would use to power the blog.</p>
+<p>Well, it turns out, that none of the ususal suspects of Python based site generators is really the way I'd like or need it. So my knee jerk reaction was to go ahead and write my own. Doh! But even with Python's proverbial batteries included, that's not a task for just an afternoon.</p>
+<p>Instead, I decided to not only <em>tinker</em> with the existing tools as I did while evaluating them, but to actually <em>use</em> them (in anger, so to speak) to build this website. Starting with the top contender, this site is currently <a class="reference external" href="https://github.com/tomster/tomster.org/tree/mynt">implemented</a> using <a class="reference external" href="http://mynt.mirroredwhite.com">mynt</a>. But while I was eventually able to bend it to my will, it required quite some dirty workarounds (see the <a class="reference external" href="https://github.com/tomster/tomster.org/blob/mynt/Makefile">Makefile</a> for the gory details).</p>
+<p>Anyway, now that I have a working setup, I can continue to try other approaches in a more leisurely fashion. Next contender will be the venerable <a class="reference external" href="http://www.blogofile.com">Blogofile</a>, which comes closest to my idea of a general purpose 'HTML compiler'.</p>
+</div>
+]]></content>
+  </entry>
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://tomster.org/blog</uri>
+    </author>
+    <title type="html"><![CDATA[Blogging again]]></title>
+    <link rel="alternate" type="text/html" href="http://tomster.org/blog/2013/10/02/blogging-again" />
+    <id>http://tomster.org/blog/2013/10/02/blogging-again</id>
+    <updated>2013-10-02T12:45:00Z</updated>
+    <published>2013-10-02T12:45:00Z</published>
+    <category scheme="http://tomster.org/blog" term="meta" />
+    <summary type="html"><![CDATA[Blogging again]]></summary>
+    <content type="html" xml:base="http://tomster.org/blog/2013/10/02/blogging-again"><![CDATA[<div class="document">
+<p>After a multi-year hiatus, I'm back to blogging.</p>
+<p>Why? Well, for starters, there's only so much you can <a class="reference external" href="http://twitter.com/tomlazar">fit into 140 characters</a>. But more importantly, I've found that I owe a great deal of my professional development during that period to other geeks who took the time to write down their experiences. Sure, there's always the official documentation and stackoverflow in any given field, but without geeks who share their successes and failures on their personal blogs (and Google, that let's me find them!), I doubt I'd be at the level of prowess that I enjoy today. Seriously.</p>
+<p>So, I've increasingly felt that I'm cheating, by only benefiting from others, without giving anything back. Until last week the level of guilt finally superseded my own laziness and I set out to build myself a blog, the result of which you can see here.</p>
+<p>At this point there's obviously no useful content yet, just the bare skeleton and this lonely first entry. But by publishing this state I hope to trick myself into following up with some actual content.</p>
+</div>
+]]></content>
+  </entry>
+</feed>

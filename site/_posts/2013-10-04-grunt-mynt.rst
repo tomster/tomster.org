@@ -1,7 +1,7 @@
 ---
 layout: post.html
 title: Hooking up grunt with mynt
-tags: [meta, mynt, grunt, yeoman, bower]
+categories: meta, mynt, grunt, yeoman, bower
 ---
 
 During the two most recent work projects I got to appreciate the convenience that a `yeoman <http://yeoman.io>`_ based workflow can bring. So when I set out to rejuvinate this blog, I naturally tried to incorporate its goodness with the static generator I would use to power the blog.

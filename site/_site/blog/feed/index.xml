@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     >
+  <channel>
+    <title>tomster.org</title>
+    <link>http://tomster.org/blog</link>
+    <description>Just a simple HTML5 blog</description>
+    <pubDate>Wed, 09 Oct 2013 10:42:16 GMT</pubDate>
+    <generator>Blogofile</generator>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <item>
+      <title>Hooking up grunt with mynt</title>
+      <link>http://tomster.org/blog/2013/10/09/hooking-up-grunt-with-mynt</link>
+      <pubDate>Wed, 09 Oct 2013 12:42:16 CEST</pubDate>
+      <category><![CDATA[bower]]></category>
+      <category><![CDATA[grunt]]></category>
+      <category><![CDATA[meta]]></category>
+      <category><![CDATA[mynt]]></category>
+      <category><![CDATA[yeoman]]></category>
+      <guid isPermaLink="false">f_4mcmeNnXBCUJYcG6HFKYwAMl0=</guid>
+      <description>Hooking up grunt with mynt</description>
+      <content:encoded><![CDATA[<div class="document">
+<p>During the two most recent work projects I got to appreciate the convenience that a <a class="reference external" href="http://yeoman.io">yeoman</a> based workflow can bring. So when I set out to rejuvinate this blog, I naturally tried to incorporate its goodness with the static generator I would use to power the blog.</p>
+<p>Well, it turns out, that none of the ususal suspects of Python based site generators is really the way I'd like or need it. So my knee jerk reaction was to go ahead and write my own. Doh! But even with Python's proverbial batteries included, that's not a task for just an afternoon.</p>
+<p>Instead, I decided to not only <em>tinker</em> with the existing tools as I did while evaluating them, but to actually <em>use</em> them (in anger, so to speak) to build this website. Starting with the top contender, this site is currently <a class="reference external" href="https://github.com/tomster/tomster.org/tree/mynt">implemented</a> using <a class="reference external" href="http://mynt.mirroredwhite.com">mynt</a>. But while I was eventually able to bend it to my will, it required quite some dirty workarounds (see the <a class="reference external" href="https://github.com/tomster/tomster.org/blob/mynt/Makefile">Makefile</a> for the gory details).</p>
+<p>Anyway, now that I have a working setup, I can continue to try other approaches in a more leisurely fashion. Next contender will be the venerable <a class="reference external" href="http://www.blogofile.com">Blogofile</a>, which comes closest to my idea of a general purpose 'HTML compiler'.</p>
+</div>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Blogging again</title>
+      <link>http://tomster.org/blog/2013/10/02/blogging-again</link>
+      <pubDate>Wed, 02 Oct 2013 12:45:00 CEST</pubDate>
+      <category><![CDATA[meta]]></category>
+      <guid isPermaLink="false">pmETo0wkPqCFBHwvFhuATSAz2rc=</guid>
+      <description>Blogging again</description>
+      <content:encoded><![CDATA[<div class="document">
+<p>After a multi-year hiatus, I'm back to blogging.</p>
+<p>Why? Well, for starters, there's only so much you can <a class="reference external" href="http://twitter.com/tomlazar">fit into 140 characters</a>. But more importantly, I've found that I owe a great deal of my professional development during that period to other geeks who took the time to write down their experiences. Sure, there's always the official documentation and stackoverflow in any given field, but without geeks who share their successes and failures on their personal blogs (and Google, that let's me find them!), I doubt I'd be at the level of prowess that I enjoy today. Seriously.</p>
+<p>So, I've increasingly felt that I'm cheating, by only benefiting from others, without giving anything back. Until last week the level of guilt finally superseded my own laziness and I set out to build myself a blog, the result of which you can see here.</p>
+<p>At this point there's obviously no useful content yet, just the bare skeleton and this lonely first entry. But by publishing this state I hope to trick myself into following up with some actual content.</p>
+</div>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>

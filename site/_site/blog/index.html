@@ -1,0 +1,143 @@
+
+
+<!doctype html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta charset="utf-8">
+  <!-- build:css(.tmp) /assets/styles/main.css -->
+  <link rel="stylesheet" href="/assets/styles/main.css">
+  <!-- endbuild -->
+
+  <title>tomster.org</title>
+  <meta name="description" content="Just a simple HTML5 blog">
+  <meta name="author" content="Tom Lazar">
+
+  <link rel="alternate" type="application/rss+xml" title="RSS 2.0"
+        href="/blog/feed/">
+  <link rel="alternate" type="application/atom+xml" title="Atom 1.0"
+        href="/blog/feed/atom/">
+
+  <link rel="shortcut icon" href="/assets/images/tomster-16.png">
+  <link rel="apple-touch-icon"
+        href="/assets/images/tomster-48.png">
+</head>
+  <body>
+
+    <div class="row">
+      <div class="large-12 columns">
+
+        <div class="row">
+
+            <nav class="top-bar">
+
+              <ul class="title-area">
+                <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+                <li class="name"><a href="/">tomster.org</a></li>
+              </ul>
+
+              <section class="top-bar-section">
+                <ul class="right">
+                  <li class="divider"></li>
+                  <li class=""><a href="/">Home</a></li>
+                  <li class="divider"></li>
+                  <li class=""><a href="/blog">Blog</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/imprint.html">Imprint</a></li>
+                  <li class="divider"></li>
+                </ul>
+              </section>
+            </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        
+  
+
+
+
+<article>
+  <div class="blog_post">
+    <header>
+      <div id="hooking-up-grunt-with-mynt"></div>
+      <h2 class="blog_post_title"><a href="/blog/2013/10/09/hooking-up-grunt-with-mynt/" rel="bookmark" title="Permanent Link to Hooking up grunt with mynt">Hooking up grunt with mynt</a></h2>
+      <p><small><span class="blog_post_date">October 09, 2013 at 12:42 PM</span> | categories: 
+        <span class="blog_post_categories"><a href='/blog/category/bower/'>bower</a>, <a href='/blog/category/grunt/'>grunt</a>, <a href='/blog/category/meta/'>meta</a>, <a href='/blog/category/mynt/'>mynt</a>, <a href='/blog/category/yeoman/'>yeoman</a></span>
+      </small></p>
+    </header>
+    <div class="post_prose">
+      
+<div class="document">
+<p>During the two most recent work projects I got to appreciate the convenience that a <a class="reference external" href="http://yeoman.io">yeoman</a> based workflow can bring. So when I set out to rejuvinate this blog, I naturally tried to incorporate its goodness with the static generator I would use to power the blog.</p>
+<p>Well, it turns out, that none of the ususal suspects of Python based site generators is really the way I'd like or need it. So my knee jerk reaction was to go ahead and write my own. Doh! But even with Python's proverbial batteries included, that's not a task for just an afternoon.</p>
+<p>Instead, I decided to not only <em>tinker</em> with the existing tools as I did while evaluating them, but to actually <em>use</em> them (in anger, so to speak) to build this website. Starting with the top contender, this site is currently <a class="reference external" href="https://github.com/tomster/tomster.org/tree/mynt">implemented</a> using <a class="reference external" href="http://mynt.mirroredwhite.com">mynt</a>. But while I was eventually able to bend it to my will, it required quite some dirty workarounds (see the <a class="reference external" href="https://github.com/tomster/tomster.org/blob/mynt/Makefile">Makefile</a> for the gory details).</p>
+<p>Anyway, now that I have a working setup, I can continue to try other approaches in a more leisurely fashion. Next contender will be the venerable <a class="reference external" href="http://www.blogofile.com">Blogofile</a>, which comes closest to my idea of a general purpose 'HTML compiler'.</p>
+</div>
+
+
+    </div>
+  </div>
+</article>
+
+
+
+  <hr class="interblog" />
+  
+
+
+
+<article>
+  <div class="blog_post">
+    <header>
+      <div id="blogging-again"></div>
+      <h2 class="blog_post_title"><a href="/blog/2013/10/02/blogging-again/" rel="bookmark" title="Permanent Link to Blogging again">Blogging again</a></h2>
+      <p><small><span class="blog_post_date">October 02, 2013 at 12:45 PM</span> | categories: 
+        <span class="blog_post_categories"><a href='/blog/category/meta/'>meta</a></span>
+      </small></p>
+    </header>
+    <div class="post_prose">
+      
+<div class="document">
+<p>After a multi-year hiatus, I'm back to blogging.</p>
+<p>Why? Well, for starters, there's only so much you can <a class="reference external" href="http://twitter.com/tomlazar">fit into 140 characters</a>. But more importantly, I've found that I owe a great deal of my professional development during that period to other geeks who took the time to write down their experiences. Sure, there's always the official documentation and stackoverflow in any given field, but without geeks who share their successes and failures on their personal blogs (and Google, that let's me find them!), I doubt I'd be at the level of prowess that I enjoy today. Seriously.</p>
+<p>So, I've increasingly felt that I'm cheating, by only benefiting from others, without giving anything back. Until last week the level of guilt finally superseded my own laziness and I set out to build myself a blog, the result of which you can see here.</p>
+<p>At this point there's obviously no useful content yet, just the bare skeleton and this lonely first entry. But by publishing this state I hope to trick myself into following up with some actual content.</p>
+</div>
+
+
+    </div>
+  </div>
+</article>
+
+
+
+  <hr class="interblog" />
+
+      </div>
+    </div>
+
+    <footer class="row">
+    <p>
+        Copyright 2013
+        Tom Lazar. 
+        Powered by <a href="http://www.blogofile.com">Blogofile</a>
+      </p>
+    </footer>
+
+    <!-- build:js /assets/scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/assets/bower_components/jquery/jquery.js"></script>
+    <script src="/assets/bower_components/foundation/js/foundation/foundation.js"></script>
+    <script src="/assets/bower_components/foundation/js/foundation/foundation.topbar.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
+

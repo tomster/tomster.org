@@ -12,14 +12,14 @@ build: preview build/deploy/index.html
 preview: build/preview/index.html
 
 build/preview/index.html: $(shell git ls-files site/ ) site/_posts/*.rst
-	bin/mynt gen site build/preview -f
+	bin/blogofile gen site build/preview -f
 
 build/deploy/index.html: Gruntfile.js $(shell git ls-files site/ )
 	grunt build
 	mv site/_templates/layout.html site/_templates/layout.html.bak
 	mv build/deploy/_templates/layout.html site/_templates/layout.html
 	mv build/deploy/assets /tmp/
-	bin/mynt gen site build/deploy -f
+	bin/blogofile gen site build/deploy -f
 	rm -rf build/deploy/_templates
 	rm -rf build/deploy/assets/styles
 	mv /tmp/assets/* build/deploy/assets/
@@ -34,7 +34,7 @@ $(foundation): .bowerrc bower.json $(grunt)
 $(grunt): package.json
 	npm install
 
-bin/ansible bin/ansible-playbook bin/mynt: bin/pip
+bin/ansible bin/ansible-playbook bin/blogofile: bin/pip
 	bin/pip install -r requirements.txt
 
 bin/python bin/pip:

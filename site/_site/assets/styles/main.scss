@@ -1,0 +1,164 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+$base-font-size: 100% !default;
+
+// This includes all of the foundation global elements that are needed to work with any of the other files.
+@import "foundation/scss/foundation/variables";
+
+
+$h1-font-size: em-calc(37);
+$h2-font-size: em-calc(27);
+$h3-font-size: em-calc(23);
+$h4-font-size: em-calc(18);
+$h5-font-size: em-calc(16);
+
+// Control how subheaders are styled.
+
+// $subheader-line-height: 1.4;
+// $subheader-font-color: lighten($header-font-color, 30%);
+// $subheader-font-weight: 300;
+// $subheader-top-margin: .2em;
+// $subheader-bottom-margin: .5em;
+
+
+$topbar-bg-color: #eee;
+$topbar-link-color: #111;
+$topbar-link-color-hover: #111;
+$topbar-link-color-active: #111;
+$topbar-menu-link-color: #111;
+$topbar-menu-icon-color: #111;
+
+$topbar-dropdown-bg: $topbar-bg-color;
+$topbar-dropdown-link-color: #111;
+// $topbar-dropdown-link-bg: lighten($topbar-bg-color, 5%);
+$topbar-dropdown-toggle-size: 5px;
+$topbar-dropdown-toggle-color: #fff;
+$topbar-dropdown-toggle-alpha: 0.5;
+$topbar-link-font-size: em-calc(15);
+
+// Foundation Components
+@import
+  "foundation/scss/foundation/components/global",
+  "foundation/scss/foundation/components/grid",
+  "foundation/scss/foundation/components/visibility",
+  "foundation/scss/foundation/components/block-grid",
+  "foundation/scss/foundation/components/type",
+  "foundation/scss/foundation/components/buttons",
+  "foundation/scss/foundation/components/forms",
+  "foundation/scss/foundation/components/button-groups",
+  "foundation/scss/foundation/components/dropdown-buttons",
+  // "foundation/scss/foundation/components/split-buttons",
+  // "foundation/scss/foundation/components/flex-video",
+  "foundation/scss/foundation/components/section",
+  "foundation/scss/foundation/components/top-bar",
+  // "foundation/scss/foundation/components/orbit",
+  // "foundation/scss/foundation/components/reveal",
+  // "foundation/scss/foundation/components/joyride",
+  "foundation/scss/foundation/components/clearing",
+  // "foundation/scss/foundation/components/alert-boxes",
+  "foundation/scss/foundation/components/breadcrumbs",
+  "foundation/scss/foundation/components/custom-forms",
+  // "foundation/scss/foundation/components/keystrokes",
+  // "foundation/scss/foundation/components/labels",
+  "foundation/scss/foundation/components/inline-lists",
+  // "foundation/scss/foundation/components/pagination",
+  "foundation/scss/foundation/components/panels",
+  // "foundation/scss/foundation/components/pricing-tables",
+  // "foundation/scss/foundation/components/progress-bars",
+  "foundation/scss/foundation/components/side-nav",
+  "foundation/scss/foundation/components/sub-nav",
+  // "foundation/scss/foundation/components/switch",
+  // "foundation/scss/foundation/components/magellan",
+  // "foundation/scss/foundation/components/tables",
+  "foundation/scss/foundation/components/thumbs",
+  "foundation/scss/foundation/components/tooltips",
+  "foundation/scss/foundation/components/dropdown";
+  // "foundation/scss/normalize";
+
+.vcard {
+  border: none;
+  text-align: center;
+  width: 100%;
+}
+
+.vcard h1.fn { 
+    font-family: Georgia;
+    font-style: italic;
+    text-transform: lowercase;
+    font-size: 300%;
+    margin: 1em auto .4em;
+    text-align: center;
+    line-height: .8em;
+}
+
+img.avatar {
+  margin-bottom: 2em;
+}
+
+.row {
+  background-color: white;
+}
+
+body {
+    background-color: #697677;
+    height: 100%;
+}
+
+@media #{$medium} { 
+
+  body {
+      background-attachment: fixed;
+      background-image: url(../images/background.jpg);
+  }
+
+}
+
+h1 a,
+h2 a {
+  color: $header-font-color;
+}
+
+footer.row {
+  text-align: center;
+  background-color: $topbar-bg-color;
+  padding-top: 1em;
+}
+
+footer p {
+  font-size: 80%;
+  color: #818f81
+}
+
+.byline {
+  font-size: .8em;
+  color: #777;
+}
+
+.top-bar {
+  margin-bottom: 1em;
+}
+
+.top-bar .name {
+  font-family: Georgia;
+  font-style: italic;
+  text-transform: lowercase;
+  font-size: 1em;
+  font-weight: bold;
+  padding-left: 1em;
+  padding-top: .5em;
+}
+
+.top-bar .name a {
+  color: $header-font-color
+}
+
+
+.code {
+  width: 100%;
+  overflow: hidden;
+}
+
+.post {
+  margin-bottom: 2em;
+}
