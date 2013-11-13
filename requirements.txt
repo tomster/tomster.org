@@ -13,5 +13,5 @@ misaka==1.0.2
 paramiko==1.10.2
 pathtools==0.1.2
 pycrypto==2.6
-watchdog==0.6.0
+-e git+https://github.com/gorakhargosh/watchdog.git@8d63bb53d31fe3b45a08f75481518e0191c5f3c9#egg=watchdog
 wsgiref==0.1.2
