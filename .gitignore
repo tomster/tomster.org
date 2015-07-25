@@ -1,3 +1,8 @@
 /.doit.db
 /cache/
 /output/
+/bin/
+/include/
+/lib/
+/pip-selfcheck.json
+/share/
