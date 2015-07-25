@@ -8,7 +8,7 @@ requirements: bin/pip requirements.txt
 	bin/pip install --upgrade -r requirements.txt
 
 bin/python bin/pip:
-	virtualenv-3.4 .
+	virtualenv -p python3 .
 
 clean:
 	git clean -fXd
