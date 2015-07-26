@@ -82,7 +82,6 @@ DEFAULT_LANG = "en"
 # the path will be used as a prefix for the generated pages location
 TRANSLATIONS = {
     DEFAULT_LANG: "",
-    "de": "./de",
 }
 
 # What will translated input files be named like?
@@ -122,20 +121,18 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/archive.html", "Archive"),
-        ("/categories/", "Tags"),
-        ("/rss.xml", "RSS feed"),
-    ),
-
-    "de": (
-        ("/de/archive.html", "Archiv"),
-        ("/de/categories/", "Tags"),
-        ("/de/rss.xml", "RSS-Feed"),
-    ),
+        ('/index.html', 'Home', 'icon-home'),
+        ('/archive.html', 'Archives', 'icon-folder-open-alt'),
+        ('/categories/index.html', 'Tags', 'icon-tags'),
+        ('/rss.xml', 'RSS', 'icon-rss'),
+        ('/about', 'About me', 'icon-user'),
+        ('https://twitter.com/tomlazar', 'Me on Twitter', 'icon-twitter'),
+        ('https://github.com/tomster', 'Me on Github', 'icon-github'),
+    )
 }
 
 # Name of the theme to use.
-THEME = "bootstrap3"
+THEME = "zen-jinja"
 
 # Below this point, everything is optional
 
