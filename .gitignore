@@ -1,6 +1,6 @@
-/.doit.db
-/cache/
-/output/
+/content/.doit.db
+/content/cache/
+/content/output/
 /bin/
 /include/
 /lib/
