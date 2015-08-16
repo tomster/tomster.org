@@ -1,16 +1,18 @@
 # convenience makefile to set up a local development environment
 
-all: requirements
-
-requirements: bin/pip requirements.txt
+bin/nikola: bin/pip requirements.txt
 	bin/pip install --upgrade setuptools
 	bin/pip install --upgrade  pip
 	bin/pip install --upgrade -r requirements.txt
+	touch bin/nikola
 
-bin/python bin/pip:
+bin/pip:
 	virtualenv -p python3 .
+
+build: bin/nikola conf.py
+	bin/nikola build
 
 clean:
 	git clean -fXd
 
-.PHONY: clean
+.PHONY: clean build
