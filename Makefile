@@ -1,49 +1,18 @@
-# convenience makefile to set up the frontend
+# convenience makefile to set up a local development environment
 
-grunt = node_modules/grunt/package.json
-foundation = site/_assets/bower_components/foundation/.bower.json
+bin/nikola: bin/pip requirements.txt
+	bin/pip install --upgrade setuptools
+	bin/pip install --upgrade  pip
+	bin/pip install --upgrade -r requirements.txt
+	touch bin/nikola
 
-all: bin/ansible build
+bin/pip:
+	virtualenv -p python3 .
 
-# build the site for deployment
-build: preview build/deploy/index.html
-
-# build the site for local preview
-preview: build/preview/index.html
-
-build/preview/index.html: $(shell git ls-files site/ ) site/_posts/*.rst
-	bin/mynt gen site build/preview -f
-
-build/deploy/index.html: Gruntfile.js $(shell git ls-files site/ )
-	grunt build
-	mv site/_templates/layout.html site/_templates/layout.html.bak
-	mv build/deploy/_templates/layout.html site/_templates/layout.html
-	mv build/deploy/assets /tmp/
-	bin/mynt gen site build/deploy -f
-	rm -rf build/deploy/_templates
-	rm -rf build/deploy/assets/styles
-	mv /tmp/assets/* build/deploy/assets/
-	rm -rf /tmp/assets
-	mv site/_templates/layout.html.bak site/_templates/layout.html
-
-install: $(grunt) $(foundation)
-
-$(foundation): .bowerrc bower.json $(grunt)
-	bower install
-
-$(grunt): package.json
-	npm install
-
-bin/ansible bin/ansible-playbook bin/mynt: bin/pip
-	bin/pip install -r requirements.txt
-
-bin/python bin/pip:
-	virtualenv .
-
-deploy: bin/ansible-playbook build/deploy/index.html
-	bin/ansible-playbook deploy.yml -i hosts
+build: bin/nikola conf.py
+	bin/nikola build
 
 clean:
 	git clean -fXd
 
-.PHONY: clean deploy install preview
+.PHONY: clean build
