@@ -7,7 +7,7 @@ bin/nikola: bin/pip requirements.txt
 	touch bin/nikola
 
 bin/pip:
-	virtualenv -p python3 .
+	virtualenv .
 
 build: bin/nikola conf.py
 	bin/nikola build
