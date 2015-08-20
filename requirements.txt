@@ -6,7 +6,6 @@ Jinja2==2.7.3
 livereload==2.4.0
 Logbook==0.10.0
 lxml==3.4.4
-MacFSEvents==0.4
 Mako==1.0.1
 MarkupSafe==0.23
 natsort==4.0.3
