@@ -8,6 +8,7 @@ bin/nikola: bin/pip requirements.txt
 
 bin/pip:
 	virtualenv .
+	bin/pip install --upgrade setuptools pip
 
 build: bin/nikola conf.py
 	bin/nikola build
