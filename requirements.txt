@@ -1,14 +1,10 @@
 argh==0.26.1
-backports.ssl-match-hostname==3.5.0.1
 blinker==1.4
-certifi==2015.11.20.1
 cloudpickle==0.1.1
-configparser==3.3.0.post2
 docutils==0.12
 doit==0.29.0
 husl==4.0.3
-Jinja2==2.7.3
-livereload==2.4.0
+Jinja2==2.8
 Logbook==0.12.3
 lxml==3.5.0
 MacFSEvents==0.7
@@ -24,9 +20,7 @@ python-dateutil==2.4.2
 PyYAML==3.11
 requests==2.9.1
 six==1.10.0
-tornado==4.2.1
 Unidecode==0.4.18
 watchdog==0.8.3
-webassets==0.10.1
 ws4py==0.3.4
 Yapsy==1.11.223

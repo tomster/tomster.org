@@ -7,7 +7,7 @@ bin/nikola: bin/pip requirements.txt
 	touch bin/nikola
 
 bin/pip:
-	virtualenv .
+	virtualenv . -p python3.5
 	bin/pip install --upgrade setuptools pip
 
 build: bin/nikola conf.py
