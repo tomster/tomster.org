@@ -1,8 +1,6 @@
 /.doit.db
 /cache/
 /output/
-/bin/
-/include/
-/lib/
+/venv/
 /pip-selfcheck.json
 /share/
