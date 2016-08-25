@@ -3,76 +3,12 @@
 from __future__ import unicode_literals
 import time
 
-# !! This is the configuration of Nikola. !! #
-# !!  You should edit it to your liking.  !! #
-
-
-# ! Some settings can be different in different languages.
-# ! A comment stating (translatable) is used to denote those.
-# ! There are two ways to specify a translatable setting:
-# ! (a) BLOG_TITLE = "My Blog"
-# ! (b) BLOG_TITLE = {"en": "My Blog", "es": "Mi Blog"}
-# ! Option (a) is used when you don't want that setting translated.
-# ! Option (b) is used for settings that are different in different languages.
-
-
-# Data about this site
 BLOG_AUTHOR = "Tom Lazar"  # (translatable)
 BLOG_TITLE = "tomster.org"  # (translatable)
-# This is the main URL for your site. It will be used
-# in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "https://tomster.org/"
-# This is the URL where Nikola's output will be deployed.
-# If not set, defaults to SITE_URL
-# BASE_URL = "https://tomster.org/"
 BLOG_EMAIL = "tom@tomster.org"
 BLOG_DESCRIPTION = "I'm a freelance Python developer and systems administrator based in Berlin, Germany."  # (translatable)
 
-# Nikola is multilingual!
-#
-# Currently supported languages are:
-#
-# en     English
-# ar     Arabic
-# az     Azerbaijani
-# bg     Bulgarian
-# ca     Catalan
-# cs     Czech [ALTERNATIVELY cz]
-# da     Danish
-# de     German
-# el     Greek [NOT gr]
-# eo     Esperanto
-# es     Spanish
-# et     Estonian
-# eu     Basque
-# fa     Persian
-# fi     Finnish
-# fr     French
-# hi     Hindi
-# hr     Croatian
-# id     Indonesian
-# it     Italian
-# ja     Japanese [NOT jp]
-# ko     Korean
-# nb     Norwegian Bokmål
-# nl     Dutch
-# pl     Polish
-# pt_br  Portuguese (Brasil)
-# ru     Russian
-# sk     Slovak
-# sl     Slovene
-# sr     Serbian (Cyrillic)
-# sv     Swedish
-# tr     Turkish [NOT tr_TR]
-# uk     Ukrainian
-# ur     Urdu
-# zh_cn  Chinese (Simplified)
-#
-# If you want to use Nikola with a non-supported language you have to provide
-# a module containing the necessary translations
-# (cf. the modules at nikola/data/themes/base/messages/).
-# If a specific post is not translated to a language, then the version
-# in the default language will be shown instead.
 
 # What is the default language?
 DEFAULT_LANG = "en"
@@ -83,14 +19,6 @@ DEFAULT_LANG = "en"
 TRANSLATIONS = {
     DEFAULT_LANG: "",
 }
-
-# What will translated input files be named like?
-
-# If you have a page something.rst, then something.pl.rst will be considered
-# its Polish translation.
-#     (in the above example: path == "something", ext == "rst", lang == "pl")
-# this pattern is also used for metadata:
-#     something.meta -> something.pl.meta
 
 TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
@@ -125,7 +53,6 @@ NAVIGATION_LINKS = {
         ('/archive.html', 'Archives', 'icon-folder-open-alt'),
         ('/categories/index.html', 'Tags', 'icon-tags'),
         ('/rss.xml', 'RSS', 'icon-rss'),
-        ('/about', 'About me', 'icon-user'),
         ('https://twitter.com/tomlazar', 'Me on Twitter', 'icon-twitter'),
         ('https://github.com/tomster', 'Me on Github', 'icon-github'),
     )
@@ -204,12 +131,11 @@ TIMEZONE = "Europe/Berlin"
 #
 
 POSTS = (
-    ("posts/*.rst", "posts", "post.tmpl"),
-    ("posts/*.txt", "posts", "post.tmpl"),
+    ("posts/*.rst", "blog", "post.tmpl"),
+    ("posts/*.txt", "blog", "post.tmpl"),
 )
 PAGES = (
-    ("stories/*.rst", "stories", "story.tmpl"),
-    ("stories/*.txt", "stories", "story.tmpl"),
+    ("pages/*.rst", "", "story.tmpl"),
 )
 
 # One or more folders containing files to be copied as-is into the output.
@@ -347,7 +273,7 @@ HIDDEN_CATEGORIES = []
 
 # Final location for the main blog page and sibling paginated pages is
 # output / TRANSLATION[lang] / INDEX_PATH / index-*.html
-# INDEX_PATH = ""
+INDEX_PATH = "blog"
 
 # Create per-month archives instead of per-year
 # CREATE_MONTHLY_ARCHIVE = False
