@@ -5,8 +5,8 @@ venv/bin/nikola: venv/bin/pip requirements.txt
 	touch venv/bin/nikola
 
 venv/bin/pip:
-	virtualenv venv -p python3.5
-	venv/bin/pip install --upgrade setuptools pip
+	virtualenv venv -p python3
+	venv/bin/pip install --upgrade setuptools pip wheel
 
 build: venv/bin/nikola conf.py
 	venv/bin/nikola build
